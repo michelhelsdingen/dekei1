@@ -46,13 +46,13 @@ Plans:
 **Depends on**: Phase 2
 **Requirements**: BACK-03
 **Success Criteria** (what must be TRUE):
-  1. De app is bereikbaar via een publiek URL (bijv. dekei1.helsdingen.com)
+  1. De app is bereikbaar via dekei1.ltcdekei.nl
   2. Teamlid opent de URL op de mobiel en de app werkt volledig — beschikbaarheid invullen, direct opgeslagen
   3. Coolify deployment is geconfigureerd zodat een git push automatisch deployt
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 03-01: Coolify deployment + DNS configuratie
+- [ ] 03-01-PLAN.md — GitHub push + Cloudflare DNS + Coolify app deployment
 
 ## Progress
 
