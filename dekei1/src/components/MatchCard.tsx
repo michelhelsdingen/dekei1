@@ -42,7 +42,7 @@ export function MatchCard({ match, selectedPlayer, onStatusChange }: MatchCardPr
           className="flex-shrink-0 ml-2 px-3 py-1 rounded-full text-xs font-bold text-white"
           style={{ backgroundColor: match.home_away === 'home' ? '#1B3A5C' : '#E87722' }}
         >
-          {match.home_away === 'home' ? 'THUIS' : 'UIT'}
+          {match.home_away === 'home' ? '🏠 THUIS' : '🚗 UIT'}
         </span>
       </div>
 
