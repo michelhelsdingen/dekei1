@@ -63,29 +63,29 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| MATCH-01 | - | Pending |
-| MATCH-02 | - | Pending |
-| MATCH-03 | - | Pending |
-| AVAIL-01 | - | Pending |
-| AVAIL-02 | - | Pending |
-| AVAIL-03 | - | Pending |
-| AVAIL-04 | - | Pending |
-| UX-01 | - | Pending |
-| UX-02 | - | Pending |
-| UX-03 | - | Pending |
-| UX-04 | - | Pending |
-| DSGN-01 | - | Pending |
-| DSGN-02 | - | Pending |
-| DSGN-03 | - | Pending |
-| BACK-01 | - | Pending |
-| BACK-02 | - | Pending |
-| BACK-03 | - | Pending |
+| MATCH-01 | Phase 2 | Pending |
+| MATCH-02 | Phase 2 | Pending |
+| MATCH-03 | Phase 2 | Pending |
+| AVAIL-01 | Phase 2 | Pending |
+| AVAIL-02 | Phase 2 | Pending |
+| AVAIL-03 | Phase 2 | Pending |
+| AVAIL-04 | Phase 2 | Pending |
+| UX-01 | Phase 2 | Pending |
+| UX-02 | Phase 2 | Pending |
+| UX-03 | Phase 2 | Pending |
+| UX-04 | Phase 2 | Pending |
+| DSGN-01 | Phase 2 | Pending |
+| DSGN-02 | Phase 2 | Pending |
+| DSGN-03 | Phase 2 | Pending |
+| BACK-01 | Phase 1 | Pending |
+| BACK-02 | Phase 2 | Pending |
+| BACK-03 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 17 total
-- Mapped to phases: 0
-- Unmapped: 17 ⚠️
+- Mapped to phases: 17
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-10*
-*Last updated: 2026-03-10 after initial definition*
+*Last updated: 2026-03-10 after roadmap creation*
