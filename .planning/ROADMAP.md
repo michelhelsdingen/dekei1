@@ -20,10 +20,10 @@ Drie fases van niets naar live: database aanmaken, de app bouwen (één scherm, 
   1. De `dekei1` database op supabase.helsdingen.com heeft een `matches` tabel met de 6 wedstrijden en een `availability` tabel voor spelersstatus
   2. Een Next.js project draait lokaal en kan queries uitvoeren op de Supabase database
   3. De 6 wedstrijden (ronde 1-6, 2026 seizoen) staan als seed data in de database
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: Database schema + seed data + Next.js project setup
+- [ ] 01-01-PLAN.md — Database schema (`dekei1` schema in postgres), seed data (6 wedstrijden), Next.js project scaffold met Supabase verbinding
 
 ### Phase 2: App
 **Goal**: Een volledig werkende mobile-first app waarmee alle 6 spelers hun beschikbaarheid kunnen invullen
