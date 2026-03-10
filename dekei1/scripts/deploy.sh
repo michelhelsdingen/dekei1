@@ -25,23 +25,30 @@ curl -s -X POST "$COOLIFY_API/deploy?uuid=$COOLIFY_UUID&force=true" \
   -H "Content-Type: application/json" > /dev/null
 
 # 3. Wait for new container to come up
-echo "[3/4] Waiting for new container (up to 120s)..."
-for i in $(seq 1 24); do
+# First record the current container name so we can detect when it changes
+OLD_CONTAINER=$(ssh plex "docker ps --filter name=$COOLIFY_UUID --format '{{.Names}}'" 2>/dev/null | head -1)
+echo "[3/4] Waiting for new container (current: ${OLD_CONTAINER:-none})..."
+
+CONTAINER=""
+for i in $(seq 1 36); do
   sleep 5
-  CONTAINER=$(ssh plex "docker ps --filter name=$COOLIFY_UUID --format '{{.Names}}'" 2>/dev/null | head -1)
-  if [ -n "$CONTAINER" ]; then
-    # Check if container is healthy/running
-    STATUS=$(ssh plex "docker inspect --format='{{.State.Status}}' $CONTAINER" 2>/dev/null || echo "")
-    if [ "$STATUS" = "running" ]; then
-      echo "  Container ready: $CONTAINER"
+  CURRENT_CONTAINER=$(ssh plex "docker ps --filter name=$COOLIFY_UUID --format '{{.Names}}'" 2>/dev/null | head -1)
+  if [ -n "$CURRENT_CONTAINER" ] && [ "$CURRENT_CONTAINER" != "$OLD_CONTAINER" ]; then
+    # New container detected, check if healthy
+    HEALTH=$(ssh plex "docker inspect --format='{{if .State.Health}}{{.State.Health.Status}}{{else}}running{{end}}' $CURRENT_CONTAINER" 2>/dev/null || echo "")
+    if [ "$HEALTH" = "healthy" ] || [ "$HEALTH" = "running" ]; then
+      CONTAINER="$CURRENT_CONTAINER"
+      echo "  New container ready: $CONTAINER"
       break
     fi
+    echo "  New container found, waiting for healthy... ($HEALTH)"
+  else
+    echo "  Building... (${i}x5s)"
   fi
-  echo "  Waiting... (${i}x5s)"
 done
 
-if [ -z "${CONTAINER:-}" ]; then
-  echo "ERROR: No running container found after 120s"
+if [ -z "$CONTAINER" ]; then
+  echo "ERROR: No new container found after 180s"
   exit 1
 fi
 
