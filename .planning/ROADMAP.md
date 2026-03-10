@@ -6,7 +6,7 @@ Drie fases van niets naar live: database aanmaken, de app bouwen (één scherm, 
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - Supabase database schema aanmaken en project scaffolding
+- [x] **Phase 1: Foundation** - Supabase database schema aanmaken en project scaffolding
 - [ ] **Phase 2: App** - Complete werkende app bouwen — wedstrijden, beschikbaarheid, design, UX
 - [ ] **Phase 3: Deploy** - Live zetten via Coolify, DNS via Cloudflare
 
@@ -23,7 +23,7 @@ Drie fases van niets naar live: database aanmaken, de app bouwen (één scherm, 
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Database schema (`dekei1` schema in postgres), seed data (6 wedstrijden), Next.js project scaffold met Supabase verbinding
+- [x] 01-01-PLAN.md — Database schema (`dekei1` schema in postgres), seed data (6 wedstrijden), Next.js project scaffold met Supabase verbinding
 
 ### Phase 2: App
 **Goal**: Een volledig werkende mobile-first app waarmee alle 6 spelers hun beschikbaarheid kunnen invullen
@@ -35,11 +35,11 @@ Plans:
   3. Per wedstrijd is in één oogopslag zichtbaar hoeveel spelers beschikbaar zijn en wat de status is van elk van de 6 spelers
   4. De app heeft LTC de Kei huisstijl (donkerblauw #1B3A5C, oranje #E87722, logo zichtbaar) en werkt prettig op telefoon
   5. Klikken op andermans naam heeft geen effect of vraagt bevestiging — UX beschermt tegen per ongeluk wijzigen
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Wedstrijdoverzicht UI + LTC de Kei design
-- [ ] 02-02: Beschikbaarheid interactie + realtime opslaan + UX bescherming
+- [ ] 02-01-PLAN.md — LTC de Kei design shell (types, layout, header, wedstrijdoverzicht met thuis/uit badges)
+- [ ] 02-02-PLAN.md — Beschikbaarheidsinteractie (PlayerSelector, StatusButtons, API route, upsert naar Supabase)
 
 ### Phase 3: Deploy
 **Goal**: De app is live bereikbaar voor alle teamleden via een domeinnaam
@@ -61,6 +61,6 @@ Phases execute in order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/1 | Not started | - |
-| 2. App | 0/2 | Not started | - |
+| 1. Foundation | 1/1 | Complete | 2026-03-10 |
+| 2. App | 0/2 | In progress | - |
 | 3. Deploy | 0/1 | Not started | - |
