@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import type { MatchWithAvailability, PlayerName } from '@/types'
+import { useState, useCallback } from 'react'
+import type { MatchWithAvailability, PlayerName, AvailabilityStatus } from '@/types'
 import { PlayerSelector } from './PlayerSelector'
 import { MatchCard } from './MatchCard'
 
@@ -10,6 +10,20 @@ interface AppClientProps {
 
 export function AppClient({ initialMatches }: AppClientProps) {
   const [selectedPlayer, setSelectedPlayer] = useState<PlayerName | null>(null)
+  const [matches, setMatches] = useState(initialMatches)
+
+  const handleStatusChange = useCallback(
+    (matchId: string | number, player: PlayerName, status: AvailabilityStatus) => {
+      setMatches(prev =>
+        prev.map(m =>
+          m.id === matchId
+            ? { ...m, availability: { ...m.availability, [player]: status } }
+            : m
+        )
+      )
+    },
+    []
+  )
 
   return (
     <div style={{ backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
@@ -40,8 +54,13 @@ export function AppClient({ initialMatches }: AppClientProps) {
           </p>
         )}
         <div className="space-y-4">
-          {initialMatches.map(match => (
-            <MatchCard key={match.id} match={match} selectedPlayer={selectedPlayer} />
+          {matches.map(match => (
+            <MatchCard
+              key={match.id}
+              match={match}
+              selectedPlayer={selectedPlayer}
+              onStatusChange={handleStatusChange}
+            />
           ))}
         </div>
       </main>

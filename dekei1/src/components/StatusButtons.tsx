@@ -3,10 +3,11 @@ import { useState } from 'react'
 import type { AvailabilityStatus } from '@/types'
 
 interface StatusButtonsProps {
-  matchId: string
+  matchId: string | number
   playerName: string
   currentStatus: AvailabilityStatus
-  isOwn: boolean // true if this is the selected player's own row
+  isOwn: boolean
+  onStatusChange?: (status: AvailabilityStatus) => void
 }
 
 const STATUS_CONFIG: Record<
@@ -39,7 +40,7 @@ const STATUS_CONFIG: Record<
   },
 }
 
-export function StatusButtons({ matchId, playerName, currentStatus, isOwn }: StatusButtonsProps) {
+export function StatusButtons({ matchId, playerName, currentStatus, isOwn, onStatusChange }: StatusButtonsProps) {
   const [optimisticStatus, setOptimisticStatus] = useState<AvailabilityStatus>(currentStatus)
   const [saving, setSaving] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
@@ -47,7 +48,7 @@ export function StatusButtons({ matchId, playerName, currentStatus, isOwn }: Sta
 
   // Read-only view for other players
   if (!isOwn) {
-    const status = optimisticStatus
+    const status = currentStatus
     if (status === null) {
       return (
         <span className="text-xs text-gray-300 italic">—</span>
@@ -79,6 +80,7 @@ export function StatusButtons({ matchId, playerName, currentStatus, isOwn }: Sta
         body: JSON.stringify({ match_id: matchId, player_name: playerName, status: newStatus }),
       })
       if (!res.ok) throw new Error('Save failed')
+      onStatusChange?.(newStatus)
       setShowSuccess(true)
       setTimeout(() => setShowSuccess(false), 1000)
     } catch {

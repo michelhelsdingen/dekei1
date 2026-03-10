@@ -1,14 +1,15 @@
 'use client'
-import type { MatchWithAvailability, PlayerName } from '@/types'
+import type { MatchWithAvailability, PlayerName, AvailabilityStatus } from '@/types'
 import { PLAYERS } from '@/types'
 import { StatusButtons } from './StatusButtons'
 
 interface MatchCardProps {
   match: MatchWithAvailability
   selectedPlayer: PlayerName | null
+  onStatusChange: (matchId: string | number, player: PlayerName, status: AvailabilityStatus) => void
 }
 
-export function MatchCard({ match, selectedPlayer }: MatchCardProps) {
+export function MatchCard({ match, selectedPlayer, onStatusChange }: MatchCardProps) {
   const availableCount = Object.values(match.availability).filter(s => s === 'ja').length
 
   return (
@@ -58,6 +59,7 @@ export function MatchCard({ match, selectedPlayer }: MatchCardProps) {
                   playerName={player}
                   currentStatus={status}
                   isOwn={isOwn}
+                  onStatusChange={(newStatus) => onStatusChange(match.id, player, newStatus)}
                 />
               </div>
             )
