@@ -13,16 +13,16 @@
 
 ### Beschikbaarheid
 
-- [ ] **AVAIL-01**: Speler kan per wedstrijd kiezen: Ja / Nee / Reserve
-- [ ] **AVAIL-02**: Keuze wordt direct opgeslagen zonder submit-knop
-- [ ] **AVAIL-03**: Huidige status per speler is in één oogopslag zichtbaar met visuele icons
-- [ ] **AVAIL-04**: Per wedstrijd is direct te zien hoeveel spelers beschikbaar zijn
+- [x] **AVAIL-01**: Speler kan per wedstrijd kiezen: Ja / Nee / Reserve
+- [x] **AVAIL-02**: Keuze wordt direct opgeslagen zonder submit-knop
+- [x] **AVAIL-03**: Huidige status per speler is in één oogopslag zichtbaar met visuele icons
+- [x] **AVAIL-04**: Per wedstrijd is direct te zien hoeveel spelers beschikbaar zijn
 
 ### UX
 
 - [x] **UX-01**: Mobile-first design — primair touch-interface op telefoon
-- [ ] **UX-02**: Speler klikt bij eigen naam — UX beschermt tegen per ongeluk ander wijzigen
-- [ ] **UX-03**: Visueel aantrekkelijke icons/animaties bij status keuze (beetje fancy)
+- [x] **UX-02**: Speler klikt bij eigen naam — UX beschermt tegen per ongeluk ander wijzigen
+- [x] **UX-03**: Visueel aantrekkelijke icons/animaties bij status keuze (beetje fancy)
 - [x] **UX-04**: Responsive — werkt ook op tablet/desktop maar mobiel is prioriteit
 
 ### Design
@@ -34,7 +34,7 @@
 ### Backend
 
 - [x] **BACK-01**: Aparte `dekei1` database op self-hosted Supabase
-- [ ] **BACK-02**: Realtime opslaan — klik = direct persisteren
+- [x] **BACK-02**: Realtime opslaan — klik = direct persisteren
 - [ ] **BACK-03**: Deployment via Coolify op plex VPS
 
 ## v2 Requirements
@@ -66,19 +66,19 @@
 | MATCH-01 | Phase 2 | Complete |
 | MATCH-02 | Phase 2 | Complete |
 | MATCH-03 | Phase 2 | Complete |
-| AVAIL-01 | Phase 2 | Pending |
-| AVAIL-02 | Phase 2 | Pending |
-| AVAIL-03 | Phase 2 | Pending |
-| AVAIL-04 | Phase 2 | Pending |
+| AVAIL-01 | Phase 2 | Complete |
+| AVAIL-02 | Phase 2 | Complete |
+| AVAIL-03 | Phase 2 | Complete |
+| AVAIL-04 | Phase 2 | Complete |
 | UX-01 | Phase 2 | Complete |
-| UX-02 | Phase 2 | Pending |
-| UX-03 | Phase 2 | Pending |
+| UX-02 | Phase 2 | Complete |
+| UX-03 | Phase 2 | Complete |
 | UX-04 | Phase 2 | Complete |
 | DSGN-01 | Phase 2 | Complete |
 | DSGN-02 | Phase 2 | Complete |
 | DSGN-03 | Phase 2 | Complete |
 | BACK-01 | Phase 1 | Complete |
-| BACK-02 | Phase 2 | Pending |
+| BACK-02 | Phase 2 | Complete |
 | BACK-03 | Phase 3 | Pending |
 
 **Coverage:**
