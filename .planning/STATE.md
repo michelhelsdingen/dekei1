@@ -9,28 +9,28 @@ See: .planning/PROJECT.md (updated 2026-03-10)
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation)
-Plan: 0 of 1 in current phase
-Status: Ready to plan
-Last activity: 2026-03-10 — Roadmap created, 3 phases defined
+Phase: 2 of 3 (App)
+Plan: 0 of ? in current phase
+Status: Phase 1 complete — ready to plan Phase 2
+Last activity: 2026-03-10 — Phase 1 Foundation executed (1/1 plans)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [███░░░░░░░] 33%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: -
+- Total plans completed: 1
+- Average duration: 7 min
+- Total execution time: 7 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 1 | 7 min | 7 min |
 
 **Recent Trend:**
-- Last 5 plans: -
+- Last 5 plans: 7 min
 - Trend: -
 
 *Updated after each plan completion*
@@ -46,17 +46,19 @@ Recent decisions affecting current work:
 - Geen auth: team van 6 volwassenen, vertrouwen is genoeg
 - Ja/Nee/Reserve (niet Ja/Nee/Misschien): preciezer voor teamplanning
 - Deployment via Coolify op plex VPS
+- **PostgREST exposeert alleen public schema**: tabellen zijn `public.dekei1_matches` en `public.dekei1_availability` (dekei1_ prefix). Geen `db.schema` optie in Supabase client.
+- **Supabase table namen**: `supabase.from('dekei1_matches')` en `supabase.from('dekei1_availability')` voor Phase 2
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
-None yet.
+None.
 
 ## Session Continuity
 
 Last session: 2026-03-10
-Stopped at: Roadmap created — ready to plan Phase 1
+Stopped at: Completed 01-01-PLAN.md — Phase 1 Foundation complete
 Resume file: None

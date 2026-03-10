@@ -33,7 +33,7 @@
 
 ### Backend
 
-- [ ] **BACK-01**: Aparte `dekei1` database op self-hosted Supabase
+- [x] **BACK-01**: Aparte `dekei1` database op self-hosted Supabase
 - [ ] **BACK-02**: Realtime opslaan — klik = direct persisteren
 - [ ] **BACK-03**: Deployment via Coolify op plex VPS
 
@@ -77,7 +77,7 @@
 | DSGN-01 | Phase 2 | Pending |
 | DSGN-02 | Phase 2 | Pending |
 | DSGN-03 | Phase 2 | Pending |
-| BACK-01 | Phase 1 | Pending |
+| BACK-01 | Phase 1 | Complete |
 | BACK-02 | Phase 2 | Pending |
 | BACK-03 | Phase 3 | Pending |
 
