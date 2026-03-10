@@ -7,7 +7,7 @@ Drie fases van niets naar live: database aanmaken, de app bouwen (één scherm, 
 ## Phases
 
 - [x] **Phase 1: Foundation** - Supabase database schema aanmaken en project scaffolding
-- [ ] **Phase 2: App** - Complete werkende app bouwen — wedstrijden, beschikbaarheid, design, UX
+- [x] **Phase 2: App** - Complete werkende app bouwen — wedstrijden, beschikbaarheid, design, UX
 - [ ] **Phase 3: Deploy** - Live zetten via Coolify, DNS via Cloudflare
 
 ## Phase Details
@@ -38,8 +38,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — LTC de Kei design shell (types, layout, header, wedstrijdoverzicht met thuis/uit badges)
-- [ ] 02-02-PLAN.md — Beschikbaarheidsinteractie (PlayerSelector, StatusButtons, API route, upsert naar Supabase)
+- [x] 02-01-PLAN.md — LTC de Kei design shell (types, layout, header, wedstrijdoverzicht met thuis/uit badges)
+- [x] 02-02-PLAN.md — Beschikbaarheidsinteractie (PlayerSelector, StatusButtons, API route, upsert naar Supabase)
 
 ### Phase 3: Deploy
 **Goal**: De app is live bereikbaar voor alle teamleden via een domeinnaam
@@ -62,5 +62,5 @@ Phases execute in order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 1/1 | Complete | 2026-03-10 |
-| 2. App | 0/2 | In progress | - |
+| 2. App | 2/2 | Complete | 2026-03-10 |
 | 3. Deploy | 0/1 | Not started | - |
