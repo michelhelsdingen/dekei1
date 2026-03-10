@@ -7,9 +7,9 @@
 
 ### Wedstrijden
 
-- [ ] **MATCH-01**: Gebruiker ziet overzicht van alle 6 wedstrijden met ronde, datum, tegenstander, thuis/uit en aanvangstijd
-- [ ] **MATCH-02**: Thuis/uit is visueel duidelijk onderscheiden (bijv. badge of icon)
-- [ ] **MATCH-03**: Tegenstander en tijdstip zijn prominent zichtbaar per wedstrijd
+- [x] **MATCH-01**: Gebruiker ziet overzicht van alle 6 wedstrijden met ronde, datum, tegenstander, thuis/uit en aanvangstijd
+- [x] **MATCH-02**: Thuis/uit is visueel duidelijk onderscheiden (bijv. badge of icon)
+- [x] **MATCH-03**: Tegenstander en tijdstip zijn prominent zichtbaar per wedstrijd
 
 ### Beschikbaarheid
 
@@ -20,16 +20,16 @@
 
 ### UX
 
-- [ ] **UX-01**: Mobile-first design — primair touch-interface op telefoon
+- [x] **UX-01**: Mobile-first design — primair touch-interface op telefoon
 - [ ] **UX-02**: Speler klikt bij eigen naam — UX beschermt tegen per ongeluk ander wijzigen
 - [ ] **UX-03**: Visueel aantrekkelijke icons/animaties bij status keuze (beetje fancy)
-- [ ] **UX-04**: Responsive — werkt ook op tablet/desktop maar mobiel is prioriteit
+- [x] **UX-04**: Responsive — werkt ook op tablet/desktop maar mobiel is prioriteit
 
 ### Design
 
-- [ ] **DSGN-01**: LTC de Kei huisstijl: donkerblauw (#1B3A5C), oranje (#E87722)
-- [ ] **DSGN-02**: LTC de Kei logo zichtbaar
-- [ ] **DSGN-03**: Tennisbal/padel design elementen als accenten
+- [x] **DSGN-01**: LTC de Kei huisstijl: donkerblauw (#1B3A5C), oranje (#E87722)
+- [x] **DSGN-02**: LTC de Kei logo zichtbaar
+- [x] **DSGN-03**: Tennisbal/padel design elementen als accenten
 
 ### Backend
 
@@ -63,20 +63,20 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| MATCH-01 | Phase 2 | Pending |
-| MATCH-02 | Phase 2 | Pending |
-| MATCH-03 | Phase 2 | Pending |
+| MATCH-01 | Phase 2 | Complete |
+| MATCH-02 | Phase 2 | Complete |
+| MATCH-03 | Phase 2 | Complete |
 | AVAIL-01 | Phase 2 | Pending |
 | AVAIL-02 | Phase 2 | Pending |
 | AVAIL-03 | Phase 2 | Pending |
 | AVAIL-04 | Phase 2 | Pending |
-| UX-01 | Phase 2 | Pending |
+| UX-01 | Phase 2 | Complete |
 | UX-02 | Phase 2 | Pending |
 | UX-03 | Phase 2 | Pending |
-| UX-04 | Phase 2 | Pending |
-| DSGN-01 | Phase 2 | Pending |
-| DSGN-02 | Phase 2 | Pending |
-| DSGN-03 | Phase 2 | Pending |
+| UX-04 | Phase 2 | Complete |
+| DSGN-01 | Phase 2 | Complete |
+| DSGN-02 | Phase 2 | Complete |
+| DSGN-03 | Phase 2 | Complete |
 | BACK-01 | Phase 1 | Complete |
 | BACK-02 | Phase 2 | Pending |
 | BACK-03 | Phase 3 | Pending |
