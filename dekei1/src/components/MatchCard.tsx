@@ -3,6 +3,14 @@ import type { MatchWithAvailability, PlayerName, AvailabilityStatus } from '@/ty
 import { PLAYERS } from '@/types'
 import { StatusButtons } from './StatusButtons'
 
+const DAYS = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za']
+const MONTHS = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
+
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr + 'T00:00:00')
+  return `${DAYS[d.getDay()]} ${d.getDate()} ${MONTHS[d.getMonth()]}`
+}
+
 interface MatchCardProps {
   match: MatchWithAvailability
   selectedPlayer: PlayerName | null
@@ -28,7 +36,7 @@ export function MatchCard({ match, selectedPlayer, onStatusChange }: MatchCardPr
         </span>
         <div className="flex-1 ml-3 min-w-0">
           <div className="font-bold text-gray-900 text-lg truncate">{match.opponent}</div>
-          <div className="text-sm text-gray-500">{match.match_date} · {match.match_time}</div>
+          <div className="text-sm text-gray-500">{formatDate(match.match_date)} · {match.match_time}</div>
         </div>
         <span
           className="flex-shrink-0 ml-2 px-3 py-1 rounded-full text-xs font-bold text-white"

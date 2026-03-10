@@ -2,6 +2,9 @@ import { supabase } from '@/lib/supabase'
 import type { MatchWithAvailability, PlayerName, AvailabilityStatus } from '@/types'
 import { AppClient } from '@/components/AppClient'
 
+// Always fetch fresh data from DB — never serve stale static HTML
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   // Load matches
   const { data: matches, error: matchError } = await supabase
