@@ -32,7 +32,7 @@ export function AppClient({ initialMatches }: AppClientProps) {
         <div className="flex items-center gap-3 relative z-10 max-w-lg mx-auto">
           <div className="flex-1">
             <h1 className="text-xl font-bold tracking-tight">DE KEI 1</h1>
-            <p className="text-sm font-medium" style={{ color: '#E87722' }}>Beschikbaarheid 2026</p>
+            <p className="text-sm font-medium" style={{ color: '#E87722' }}>AA Drink Voorjaarscompetitie 2026</p>
           </div>
           {/* Tennis ball decoration */}
           <svg width="48" height="48" viewBox="0 0 48 48" className="opacity-20" aria-hidden="true">

@@ -11,9 +11,13 @@ interface MatchCardProps {
 
 export function MatchCard({ match, selectedPlayer, onStatusChange }: MatchCardProps) {
   const availableCount = Object.values(match.availability).filter(s => s === 'ja').length
+  const teamComplete = availableCount >= 4
 
   return (
-    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+    <div
+      className="rounded-xl shadow-sm overflow-hidden"
+      style={teamComplete ? { backgroundColor: '#ffffff', border: '2px solid #16a34a', boxShadow: '0 0 0 1px #bbf7d0' } : { backgroundColor: '#ffffff' }}
+    >
       {/* Card header */}
       <div className="flex items-center p-4 border-b border-gray-100">
         <span
@@ -68,8 +72,8 @@ export function MatchCard({ match, selectedPlayer, onStatusChange }: MatchCardPr
 
         {/* Availability counter */}
         <div className="mt-3 pt-3 border-t border-gray-200">
-          <span className="text-sm font-semibold" style={{ color: '#E87722' }}>
-            {availableCount} van 6 beschikbaar
+          <span className="text-sm font-semibold" style={{ color: teamComplete ? '#16a34a' : '#E87722' }}>
+            {teamComplete ? '✓ ' : ''}{availableCount} van 6 beschikbaar
           </span>
         </div>
       </div>
