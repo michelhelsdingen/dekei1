@@ -1,14 +1,17 @@
-import type { Match, Availability, MatchWithAvailability, PlayerName, AvailabilityStatus } from '@/types'
+import type { Match, Availability, MatchWithAvailability, PlayerName, AvailabilityStatus, Season } from '@/types'
 import { AppClient } from '@/components/AppClient'
 import { getDB } from '@/lib/db'
 
 export const dynamic = 'force-dynamic'
 
+// Voorjaar-tab verdwijnt op deze datum (dag ná de laatste voorjaarswedstrijd 23-5-2026).
+const VOORJAAR_HIDE_AFTER = '2026-05-24'
+
 export default async function Home() {
   const db = await getDB()
 
   const matchesRes = await db
-    .prepare('SELECT id, round, match_date, opponent, home_away, match_time FROM dekei1_matches ORDER BY round ASC')
+    .prepare('SELECT id, round, match_date, opponent, home_away, match_time, season FROM dekei1_matches ORDER BY season DESC, round ASC')
     .all<Match>()
 
   if (!matchesRes.success) {
@@ -37,5 +40,15 @@ export default async function Home() {
     return { ...match, availability: map }
   })
 
-  return <AppClient initialMatches={matchesWithAvailability} />
+  const today = new Date().toISOString().slice(0, 10)
+  const showVoorjaar = today < VOORJAAR_HIDE_AFTER
+  const availableSeasons: Season[] = showVoorjaar ? ['zomer-2026', 'voorjaar-2026'] : ['zomer-2026']
+
+  return (
+    <AppClient
+      initialMatches={matchesWithAvailability}
+      availableSeasons={availableSeasons}
+      defaultSeason="zomer-2026"
+    />
+  )
 }

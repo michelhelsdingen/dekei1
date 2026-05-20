@@ -1,5 +1,6 @@
 export type PlayerName = 'Mark' | 'Coen' | 'Bas' | 'Maarten' | 'Niels' | 'Michel'
 export type AvailabilityStatus = 'ja' | 'nee' | 'reserve' | null
+export type Season = 'voorjaar-2026' | 'zomer-2026'
 
 export interface Match {
   id: number
@@ -8,6 +9,7 @@ export interface Match {
   match_time: string   // "09:30"
   opponent: string
   home_away: 'home' | 'away'
+  season: Season
 }
 
 export interface Availability {
@@ -23,3 +25,14 @@ export interface MatchWithAvailability extends Match {
 }
 
 export const PLAYERS: PlayerName[] = ['Mark', 'Coen', 'Bas', 'Maarten', 'Niels', 'Michel']
+
+export interface SeasonMeta {
+  id: Season
+  label: string
+  subtitle: string
+}
+
+export const SEASON_META: Record<Season, SeasonMeta> = {
+  'zomer-2026':    { id: 'zomer-2026',    label: 'Zomer',    subtitle: 'Zomercompetitie 2026' },
+  'voorjaar-2026': { id: 'voorjaar-2026', label: 'Voorjaar', subtitle: 'AA Drink Voorjaarscompetitie 2026' },
+}
