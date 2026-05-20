@@ -10,6 +10,7 @@ export interface Match {
   opponent: string
   home_away: 'home' | 'away'
   season: Season
+  note: string | null
 }
 
 export interface Availability {

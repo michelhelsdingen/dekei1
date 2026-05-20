@@ -11,7 +11,7 @@ export default async function Home() {
   const db = await getDB()
 
   const matchesRes = await db
-    .prepare('SELECT id, round, match_date, opponent, home_away, match_time, season FROM dekei1_matches ORDER BY season DESC, round ASC')
+    .prepare('SELECT id, round, match_date, opponent, home_away, match_time, season, note FROM dekei1_matches ORDER BY season DESC, round ASC')
     .all<Match>()
 
   if (!matchesRes.success) {

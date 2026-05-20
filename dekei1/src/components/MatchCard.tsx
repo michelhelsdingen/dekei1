@@ -46,6 +46,14 @@ export function MatchCard({ match, selectedPlayer, onStatusChange }: MatchCardPr
         </span>
       </div>
 
+      {/* Match note (e.g. datum-verzoek tegenstander) */}
+      {match.note && (
+        <div className="px-4 py-2.5 flex items-start gap-2 border-b border-amber-200" style={{ backgroundColor: '#FEF3C7' }}>
+          <span aria-hidden="true" className="text-base leading-5">⚠️</span>
+          <p className="text-sm font-medium leading-5" style={{ color: '#92400E' }}>{match.note}</p>
+        </div>
+      )}
+
       {/* Players section */}
       <div className="p-4 bg-gray-50">
         <p className="text-xs uppercase tracking-wide text-gray-400 mb-3">Spelers</p>
