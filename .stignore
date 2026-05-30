@@ -1,0 +1,15 @@
+// Build output
+**/node_modules
+**/.next
+**/build
+**/dist
+**/.turbo
+**/.cache
+.DS_Store
+**/.DS_Store
+**/*.xcarchive
+**/DerivedData
+**/__pycache__
+**/*.pyc
+**/.venv
+**/*.log

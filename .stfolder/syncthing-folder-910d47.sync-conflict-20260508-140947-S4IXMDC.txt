@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: dekei1
+created: 2026-05-07T23:28:41+02:00
